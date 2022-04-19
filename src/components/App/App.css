@@ -1,11 +1,11 @@
 .App {
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
   color: #000000;
-  width: 665px;
+  max-width: 665px;
 }
 
 .app__content {
@@ -15,11 +15,14 @@
 .app__filter {
   width: 152px;
   height: 100vh;
-  background: #BDBDBD;
+  background: #bdbdbd;
 }
 
 .app__filter-title {
   margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 .app__filter-content {
@@ -32,7 +35,6 @@
 
 .app__card-content {
   margin: 19px 0 0 31px;
-
 }
 
 .app__cards-title {
@@ -44,3 +46,9 @@
   line-height: 16px;
 }
 
+.app__card-counter {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  text-align: right;
+}

@@ -4,7 +4,9 @@
   color: #fff;
   border: none;
   cursor: pointer;
-  width: 105px;
+  max-width: 105px;
   height: 24px;
   box-sizing: border-box;
+  text-align: start;
+  padding-left: 15px;
 }

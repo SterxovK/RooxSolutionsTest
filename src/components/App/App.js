@@ -1,22 +1,20 @@
 import "./App.css";
 import Button from "../Button/Button";
-import Card from "../Card/Card";
-import api from "../../Api/Api";
-import { useState } from "react";
-import { useEffect } from "react";
+import CardsContent from "../CardsContent/CardsContent";
+import CardDetailed from "../CardDetailed/CardDetailed";
+import {useState} from "react";
+
+
+
 
 function App() {
-  const[info, setInfo] = useState([])
+  const [selectedCard, setSelectedCard] = useState({});
 
-  useEffect(() => {
-    api.search()
-    .then((users) => 
-        setInfo(users))
-        .catch(err => console.log(err))
-  }, []);
+  const handleCardClick = (card) => {
+    //console.log(user)
+    setSelectedCard(card);
+  };
 
-   
-        
   return (
     <div className="App">
       <div className="app__content">
@@ -27,17 +25,8 @@ function App() {
             <Button title={"по компании"} />
           </div>
         </div>
-        <div className="app__cards">
-          <div className="app__card-content">
-            <h1 className="app__cards-title">Список пользователей</h1>
-            {info.map((item) => {
-              return <Card key={item.id} {...item} />;
-            })}
-            <p className="app__card-counter">
-              Найдено {info.length} пользователей
-            </p>
-          </div>
-        </div>
+        <CardsContent onCardClick={handleCardClick} />
+        <CardDetailed user={selectedCard}/>
       </div>
     </div>
   );

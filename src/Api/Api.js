@@ -8,7 +8,6 @@ class Api {
   search() {
     return fetch(`${this.url}`)
       .then((response) => response.json())
-      //.then((users) => console.log(users));
   }
 }
 

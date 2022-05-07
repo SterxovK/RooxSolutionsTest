@@ -9,12 +9,12 @@
 }
 
 .app__content {
+  width: 770px;
   display: flex;
 }
 
 .app__filter {
-  width: 152px;
-  height: 100vh;
+  width: 200px;
   background: #bdbdbd;
 }
 
@@ -26,6 +26,7 @@
 }
 
 .app__filter-content {
+  width: 90px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,7 +34,7 @@
   height: 74px;
 }
 
-.app__card-content {
+.app__cards-content {
   margin: 19px 0 0 31px;
 }
 
@@ -45,10 +46,19 @@
   font-size: 14px;
   line-height: 16px;
 }
+.app_cards-item {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.app_cards-item :last-of-type {
+  margin-bottom: 0;
+}
 
 .app__card-counter {
   font-size: 12px;
   line-height: 14px;
   margin: 0;
   text-align: right;
+  margin-top: 10px;
 }

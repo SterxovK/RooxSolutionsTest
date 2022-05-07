@@ -7,6 +7,7 @@
   margin-bottom: 14px;
 }
 
+
 .card__info {
   height: 100%;
   display: flex;
@@ -20,6 +21,8 @@
   bottom: 10px;
   text-decoration: none;
   color: #4B51EF;
+  border: none;
+  cursor: pointer;
 }
 
 .card__user {
